@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>hiburan</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #f8f9fa;
+    }
+    .navbar-dark .navbar-nav .nav-link.active {
+      color: #ff4081;
+    }
+    .card {
+      background-color: #1e1e1e;
+      border: none;
+    }
+    .footer {
+      background-color: #222;
+      padding: 20px 0;
+      text-align: center;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">HiburanSeru</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#film">Film</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#musik">Musik</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#berita">Berita</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tentang">Tentang</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel Banner -->
+  <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="height: 400px; background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+          <h2>Film Terbaru & Seru</h2>
+          <p>Nikmati koleksi film terbaru dan terpopuler di sini!</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="height: 400px; background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+          <h2>Musik Hits & Terbaru</h2>
+          <p>Dengarkan lagu-lagu favorit dan hits terbaru sepanjang masa.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="height: 400px; background: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+          <h2>Berita Hiburan Terkini</h2>
+          <p>Update terbaru tentang dunia hiburan dan selebriti favoritmu.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Sebelumnya</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Selanjutnya</span>
+    </button>
+  </div>
+
+  <!-- Film Seruuu Section -->
+  <section id="film" class="container my-5">
+    <h3 class="mb-4 border-start border-4 border-danger ps-3">Film Seruu</h3>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="toro.jpg" class="card-img-top" alt="Film 1" width="600px"/>
+          <div class="card-body">
+            <p class="card-text">
+            <h5 class="card-title">My Neighbor Totoro</h5>
+             <h5> menceritakan 2 orang gadis yang pindah ke pedesaan karena menunggu ibunya
+             pulih dari rumah sakit terdekatdan saat pindah kerumah baru mereka dibantu oleh seorang nene tua.</h5>
+            <a href="#" class="btn btn-danger btn-sm">Tonton</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="ciro.webp" class="card-img-top" alt="Film 2" />
+          <div class="card-body">
+            <h5 class="card-title">Sprited Away</h5>
+            <p class="card-text">
+             <h5>Film animasi jepang yang menceritakan tentang kisah seorang gadis berumur 10
+              tahun dan kedua orang tuanya masuk ke sebuah tempat hinuran ghaib dan orang tuanya menjadi seekor babi.</h5>
+            <a href="#" class="btn btn-danger btn-sm">Tonton</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="ponyo.png" class="card-img-top" alt="Film 3" />
+          <div class="card-body">
+            <h5 class="card-title">Ponyo
+            <p class="card-text">
+             <h5>>menceritakan tentang persahabatan antara seorang anak laki-laki bernama
+               Sosuke dan putri ikan mas ajaib bernama Ponyo yang sangat cantik dan mungil.
+               tetapi ponyo seekor ian mas
+               Ponyo, yang memiliki sihir,yang sangat ajaib</h5>
+            <a href="#" class="btn btn-danger btn-sm">Tonton</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="meru.jpeg" class="card-img-top" alt="Film 4" />
+          <div class="card-body">
+            <h5 class="card-title">From Up On Popy Hill</h5>
+            <p class="card-text"> 
+             <h5> seorang gadis berusia 16 tahun yang bernama Umi Matsuzaki, 
+              yang juga memiliki nama panggilan Meru. Umi tinggal di rumah yang terletak di sebuah bukit 
+               yang dekat dengan pelabuhan</h5>
+            <a href="#" class="btn btn-danger btn-sm">Tonton</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Musik Populer Section -->
+  <section id="musik" class="container my-5">
+    <h3 class="mb-4 border-start border-4 border-success ps-3">Musik Populer</h3>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="dan.jpg" class="img-fluid rounded mb-3" alt="Album 1" />
+          <h5>Dan...- sheila on 7</h5>          
+          <a href="#" class="btn btn-success btn-sm">Dengarkan</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="love.jpg" class="img-fluid rounded mb-3" alt="Album 2" />
+          <h5>Love- keyshhia cole</h5>
+         
+          <a href="#" class="btn btn-success btn-sm">Dengarkan</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="my hert.jpg" class="img-fluid rounded mb-3" alt="Album 3" />
+          <h5>my heart-acha septriasa</h5>        
+          <a href="#" class="btn btn-success btn-sm">Dengarkan</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="all mine.jpg" class="img-fluid rounded mb-3" alt="Album 4" />
+          <h5> my love mine all mine-mitski</h5>
+         
+          <a href="#" class="btn btn-success btn-sm">Dengarkan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Berita Hiburan Section -->
+  <section id="berita" class="container my-5">
+    <h3 class="mb-4 border-start border-4 border-warning ps-3">Berita Hiburan </h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="1.1.jpg" class="card-img-top" alt="Berita 1" />
+          <div class="card-body">
+            <h5 class="card-title">jazz</h5>
+            <p class="card-text">Acara festival film terbesar tahun ini resmi dibuka dengan berbagai karya unggulan.</p>
+            <a href="#" class="btn btn-warning btn-sm">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="1.2.webp" class="card-img-top" alt="Berita 2" />
+          <div class="card-body">
+            <h5 class="card-title">peterpan</h5>
+            <p class="card-text">Musisi terkenal dunia akan menggelar konser spektakuler di ibu kota bulan depan.</p>
+            <a href="#" class="btn btn-warning btn-sm">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="1.3.jpeg" class="card-img-top" alt="Berita 3" />
+          <div class="card-body">
+            <h5 class="card-title">hello monster</h5>
+            <p class="card-text">Proyek baru yang ditunggu-tunggu oleh para penggemar akhirnya diumumkan hari ini.</p>
+            <a href="#" class="btn btn-warning btn-sm">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Section -->
+  <section id="tentang" class="container my-5 text-center">
+    <h3 class="mb-4">Tentang HiburanSeru</h3>
+    <p>HiburanSeru adalah platform terbaik untuk menikmati film, musik, dan berita hiburan terbaru di seluruh dunia. Kami hadir untuk menghibur dan memberikan informasi terkini yang kamu butuhkan.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 HiburanSeru. All rights reserved.</p>
+      <p>
+        Follow us:
+        <a href="#" class="text-decoration-none text-light mx-2">Facebook</a> |
+        <a href="#" class="text-decoration-none text-light mx-2">Instagram</a> |
+        <a href="#" class="text-decoration-none text-light mx-2">Twitter</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
