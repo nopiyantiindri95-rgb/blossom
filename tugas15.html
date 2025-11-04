@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+        /* Background gradient */
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #dbe9f4);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+            color: #333;
+        }
+
+        /* Navbar custom */
+        nav.navbar {
+            background-color: #222;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        nav.navbar .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            color: #f8f9fa !important;
+            text-transform: uppercase;
+        }
+
+        nav.navbar .nav-link {
+            font-weight: 500;
+            font-size: 1rem;
+            color: #ddd !important;
+            transition: color 0.3s ease;
+        }
+        nav.navbar .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+        /* Hero Section */
+        header.hero {
+            background: linear-gradient(120deg, #0d6efd, #6610f2);
+            color: #fff;
+            text-align: center;
+            padding: 6rem 1rem 4rem;
+            position: relative;
+            overflow: visible;
+        }
+
+        /* Bingkai foto unik */
+        .profile-pic-frame {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 2rem;
+            position: relative;
+            border-radius: 50%;
+            background:
+                radial-gradient(circle at 20% 20%, #0d6efd, transparent 50%),
+                radial-gradient(circle at 80% 80%, #6610f2, transparent 50%);
+            box-shadow:
+                0 0 20px rgba(13, 110, 253, 0.7),
+                0 0 30px rgba(102, 16, 242, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+        .profile-pic-frame:hover {
+            transform: rotate(10deg) scale(1.05);
+            box-shadow:
+                0 0 40px rgba(13, 110, 253, 1),
+                0 0 60px rgba(102, 16, 242, 1);
+        }
+        .profile-pic-frame img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Section titles */
+        .section-title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+            color: #0d6efd;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background: #6610f2;
+            margin-top: 6px;
+            border-radius: 2px;
+        }
+
+        /* Text content */
+        p.lead {
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 650px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        /* Skill card */
+        .skill-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.15);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+        }
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(13, 110, 253, 0.3);
+        }
+        .skill-card h5 {
+            font-weight: 700;
+            color: #0d6efd;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .skill-card p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        /* Contact icons & buttons */
+        .contact-info a {
+            display: inline-flex;
+            align-items: center;
+            margin: 0.5rem 1rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #0d6efd;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #6610f2;
+        }
+        .contact-info i {
+            font-size: 1.8rem;
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 576px) {
+            header.hero {
+                padding: 4rem 1rem 3rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .skill-card {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">INDRI</a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+        >
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentang">Tentang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#keahlian">Keahlian</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="container">
+        <div class="profile-pic-frame" title="Klik untuk melihat foto profil">
+            <img
+                src="si cantik.jpg"
+                alt="Foto Profil"
+            />
+        </div>
+        <h1 class="display-5 fw-bold">Halo, Saya Indri Nopiyanti</h1>
+        <p class="lead">
+        
+        </p>
+    </div>
+</header>
+
+<!-- Tentang Saya -->
+<section id="tentang" class="py-5">
+    <div class="container text-center">
+        <h2 class="section-title">Tentang Saya</h2>
+        <p class="lead mx-auto">
+            Saya adalah seorang siswa kelas XII-9  di SMAN 10 GARUT. Setelah lulus saya ingin melanjutkan ke perguruan tinggi 
+            dan jurusan yang saya ambil yaitu keperawatan atau pendidikan biologi namun saya masih ragu-ragu dengan kedua jurusan 
+            tersebut karna saya tidak tahu apakah saya mampu dengan jurusan tersebut atau tidak. Dan jika tidak ke perguruan tinggi
+            saya akan mencari pekerjaan.
+        </p>
+    </div>
+</section>
+
+<!-- Pacar Saya -->
+<section id="k" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Universitas Impian</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="skill-card">
+                    <h5>UNIVERSITAS PADJAJARAN</h5>
+                 <div> <img src="unpad.jpg" alt="" width="200px"></div>
+                            
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill-card">
+                    <h5>UNIVERSITAS PENDIDIKAN INDONESIA</h5>
+                    <div> <img src="upi.jpg" alt="" width="200px"> </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill-card">
+                    <h5>POLITEKNIK KESEHATAN BANDUNG</h5>
+                   <div> <img src="polkesban.jpg" alt="" width="200px"></div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Idola Saya</title>
+  <!-- Bootstrap CSS CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="mb-4 text-center">Idola Saya</h1>
+    <div class="row g-4">
+      
+      <!-- Idola 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="yun.jpg"
+            class="card-img-top"
+            alt="Idola 1"
+          />
+          <div class="card-body">
+            <h5 class="card-title">jaehyun</h5>         
+          </div>
+        </div>
+      </div>
+
+      <!-- Idola 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="san.jpg"
+            class="card-img-top"
+            alt="Idola 2"
+          />
+          <div class="card-body">
+            <h5 class="card-title">san</h5>           
+          </div>
+        </div>
+      </div>
+
+      <!-- Idola 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="mingyu.webp"
+            class="card-img-top"
+            alt="Idola 3"
+          />
+          <div class="card-body">
+            <h5 class="card-title">mingyu</h5>
+        
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle CDN (optional jika butuh komponen JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<!-- Footer -->
+<footer>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+     <!-- Kontak -->
+<section id="kontak" class="py-5">
+    <div class="container text-center">
+        <h2 class="section-title">TERIMA KASIH</h2>
+        <div class="contact-info d-flex justify-content-center flex-wrap gap-3">
+            <a href="mailto:emailanda@example.com" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-envelope-fill"></i> nopiyantiindri95@gmail.com
+            </a>
+            <a href="https://wa.me/6285860232361" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+           
+        </div>
+    </div>
